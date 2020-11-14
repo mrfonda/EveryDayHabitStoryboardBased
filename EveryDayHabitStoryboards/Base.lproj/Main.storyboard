@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8j-go-TOd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zPG-7z-yaW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -20,15 +20,46 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Fo-0m-C6n">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewLayout key="collectionViewLayout" id="48s-92-eoH" customClass="RulesLayout" customModule="EveryDayHabitStoryboards" customModuleProvider="target"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GfA-Xg-UN0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1bj-wO-VrI">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayCell" id="1bj-wO-VrI" customClass="HabitDayCell" customModule="EveryDayHabitStoryboards" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2ct-SH-mdn">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="147" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-Q6-BXj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="115"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-wq-bRq">
+                                                    <rect key="frame" x="51.5" y="47" width="44.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zfm-wq-bRq" firstAttribute="centerX" secondItem="2ct-SH-mdn" secondAttribute="centerX" id="28t-2d-vaG"/>
+                                                <constraint firstItem="cU3-Q6-BXj" firstAttribute="leading" secondItem="2ct-SH-mdn" secondAttribute="leading" id="2HR-fZ-Pcm"/>
+                                                <constraint firstAttribute="trailing" secondItem="cU3-Q6-BXj" secondAttribute="trailing" id="C4l-pv-e9o"/>
+                                                <constraint firstItem="zfm-wq-bRq" firstAttribute="height" relation="lessThanOrEqual" secondItem="2ct-SH-mdn" secondAttribute="height" id="HeQ-9U-7Ec"/>
+                                                <constraint firstAttribute="bottom" secondItem="cU3-Q6-BXj" secondAttribute="bottom" id="kkq-Gz-3qc"/>
+                                                <constraint firstItem="zfm-wq-bRq" firstAttribute="centerY" secondItem="2ct-SH-mdn" secondAttribute="centerY" id="nko-Kq-mGp"/>
+                                                <constraint firstItem="cU3-Q6-BXj" firstAttribute="top" secondItem="2ct-SH-mdn" secondAttribute="top" id="nv9-2u-FXX"/>
+                                                <constraint firstItem="zfm-wq-bRq" firstAttribute="width" relation="lessThanOrEqual" secondItem="2ct-SH-mdn" secondAttribute="width" id="yy4-i3-hhd"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="147" height="115"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="cU3-Q6-BXj" id="180-zy-I7D"/>
+                                            <outlet property="nameLabel" destination="zfm-wq-bRq" id="DLv-vR-rMj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -42,10 +73,13 @@
                             <constraint firstItem="3Fo-0m-C6n" firstAttribute="leading" secondItem="Jg8-pv-Kem" secondAttribute="leading" id="bly-E9-QQR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="3Fo-0m-C6n" id="f9u-wZ-tI7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZA-fC-syb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="117"/>
+            <point key="canvasLocation" x="-823.1884057971015" y="116.51785714285714"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="VMM-lo-FvA">

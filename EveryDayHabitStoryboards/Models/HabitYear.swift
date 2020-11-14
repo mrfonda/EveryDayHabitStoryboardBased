@@ -26,11 +26,13 @@ class HabitYear {
     
 }
 
-class HabitMonth {
+class HabitMonth: Hashable {
+    var id = UUID()
+    
     let year: Int
     let month: Int
     let name: String
-    let days: [HabitDay]
+    var days: [HabitDay]
     
     init?(calendar: Calendar, year: Int, month: Int) {
         let calendar = Calendar(identifier: .gregorian)
@@ -47,12 +49,30 @@ class HabitMonth {
             return HabitDay(day: day)
         }
     }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: HabitMonth, rhs: HabitMonth) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
-class HabitDay {
-    let num: Int
+struct HabitDay: Hashable {
+    var id = UUID()
+    
+    var num: Int
     var isHabitTrained: Bool = false
     init(day: Int) {
         self.num = day
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: HabitDay, rhs: HabitDay) -> Bool {
+        lhs.id == rhs.id
     }
 }

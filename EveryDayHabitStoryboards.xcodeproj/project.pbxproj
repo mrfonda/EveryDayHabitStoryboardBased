@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76DA3E33255FB9E5008320B7 /* HabitMonthSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA3E32255FB9E5008320B7 /* HabitMonthSectionHeaderView.swift */; };
+		76DA3E3C255FBB0A008320B7 /* HabitDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA3E3B255FBB0A008320B7 /* HabitDayCell.swift */; };
+		76DA3E60255FEDFF008320B7 /* NSLayoutConstrain+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA3E5F255FEDFF008320B7 /* NSLayoutConstrain+Extension.swift */; };
 		76F4D353255FA21B004FAEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4D352255FA21B004FAEB0 /* AppDelegate.swift */; };
 		76F4D355255FA21B004FAEB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4D354255FA21B004FAEB0 /* SceneDelegate.swift */; };
-		76F4D357255FA21B004FAEB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4D356255FA21B004FAEB0 /* ViewController.swift */; };
+		76F4D357255FA21B004FAEB0 /* HabitYearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4D356255FA21B004FAEB0 /* HabitYearViewController.swift */; };
 		76F4D35A255FA21B004FAEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F4D358255FA21B004FAEB0 /* Main.storyboard */; };
 		76F4D35D255FA21B004FAEB0 /* EveryDayHabitStoryboards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F4D35B255FA21B004FAEB0 /* EveryDayHabitStoryboards.xcdatamodeld */; };
 		76F4D35F255FA220004FAEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F4D35E255FA220004FAEB0 /* Assets.xcassets */; };
@@ -39,10 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76DA3E32255FB9E5008320B7 /* HabitMonthSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitMonthSectionHeaderView.swift; sourceTree = "<group>"; };
+		76DA3E3B255FBB0A008320B7 /* HabitDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDayCell.swift; sourceTree = "<group>"; };
+		76DA3E5F255FEDFF008320B7 /* NSLayoutConstrain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstrain+Extension.swift"; sourceTree = "<group>"; };
 		76F4D34F255FA21B004FAEB0 /* EveryDayHabitStoryboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryDayHabitStoryboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F4D352255FA21B004FAEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F4D354255FA21B004FAEB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76F4D356255FA21B004FAEB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76F4D356255FA21B004FAEB0 /* HabitYearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitYearViewController.swift; sourceTree = "<group>"; };
 		76F4D359255FA21B004FAEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76F4D35C255FA21B004FAEB0 /* EveryDayHabitStoryboards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EveryDayHabitStoryboards.xcdatamodel; sourceTree = "<group>"; };
 		76F4D35E255FA220004FAEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +90,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76DA3E30255FB9B4008320B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76DA3E3A255FBAE9008320B7 /* DayCell */,
+				76DA3E31255FB9BC008320B7 /* Header */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76DA3E31255FB9BC008320B7 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				76DA3E32255FB9E5008320B7 /* HabitMonthSectionHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		76DA3E3A255FBAE9008320B7 /* DayCell */ = {
+			isa = PBXGroup;
+			children = (
+				76DA3E3B255FBB0A008320B7 /* HabitDayCell.swift */,
+			);
+			path = DayCell;
+			sourceTree = "<group>";
+		};
+		76DA3E5E255FEDDF008320B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				76DA3E5F255FEDFF008320B7 /* NSLayoutConstrain+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		76F4D346255FA21B004FAEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +146,7 @@
 		76F4D351255FA21B004FAEB0 /* EveryDayHabitStoryboards */ = {
 			isa = PBXGroup;
 			children = (
+				76DA3E5E255FEDDF008320B7 /* Extensions */,
 				76F4D389255FA36A004FAEB0 /* Models */,
 				76F4D388255FA341004FAEB0 /* ViewControllers */,
 				76F4D352255FA21B004FAEB0 /* AppDelegate.swift */,
@@ -166,8 +206,9 @@
 		76F4D390255FAB84004FAEB0 /* HabitYearViewController */ = {
 			isa = PBXGroup;
 			children = (
+				76DA3E30255FB9B4008320B7 /* Views */,
 				76F4D399255FB1D1004FAEB0 /* Layout */,
-				76F4D356255FA21B004FAEB0 /* ViewController.swift */,
+				76F4D356255FA21B004FAEB0 /* HabitYearViewController.swift */,
 			);
 			path = HabitYearViewController;
 			sourceTree = "<group>";
@@ -310,10 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F4D357255FA21B004FAEB0 /* ViewController.swift in Sources */,
+				76DA3E60255FEDFF008320B7 /* NSLayoutConstrain+Extension.swift in Sources */,
+				76F4D357255FA21B004FAEB0 /* HabitYearViewController.swift in Sources */,
+				76DA3E33255FB9E5008320B7 /* HabitMonthSectionHeaderView.swift in Sources */,
 				76F4D39B255FB205004FAEB0 /* CalendarLayout.swift in Sources */,
 				76F4D353255FA21B004FAEB0 /* AppDelegate.swift in Sources */,
 				76F4D392255FABC9004FAEB0 /* HabitsTableViewController.swift in Sources */,
+				76DA3E3C255FBB0A008320B7 /* HabitDayCell.swift in Sources */,
 				76F4D35D255FA21B004FAEB0 /* EveryDayHabitStoryboards.xcdatamodeld in Sources */,
 				76F4D38B255FA393004FAEB0 /* HabitYear.swift in Sources */,
 				76F4D355255FA21B004FAEB0 /* SceneDelegate.swift in Sources */,
